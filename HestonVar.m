@@ -1,4 +1,13 @@
 function paths = HestonVar(Variance,kapa,theta,volvar0,T,N,NPaths)
+@ `HestonVar` function simulates variance paths using the Heston stochastic volatility model.
+@ Take inputs:
+@ - Variance: Initial variance of the asset.
+@ - kapa (kappa): Rate of reversion of the variance to its long-term mean.
+@ - theta: Long-term mean variance.
+@ - volvar0 (volatility of volatility): The volatility parameter for the variance process.
+@ - T: Total time to maturity.
+@ - N: Number of time steps.
+@ - NPaths: Number of variance paths to simulate.
 
    paths = zeros(NPaths,N+1);
    paths(:,1) = Variance;
